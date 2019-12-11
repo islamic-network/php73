@@ -1,6 +1,6 @@
-[![CircleCI](https://circleci.com/ghvesica/php73.svg?style=shield)](https://circleci.com/ghvesica/php73)
+[![CircleCI](https://circleci.com/gh/islamic-network/php73.svg?style=shield)](https://circleci.com/gh/islamic-network/php73)
 [![](https://img.shields.io/github/license/islamic-network/php73.svg)](https://github.com/islamic-network/php73/blob/master/LICENSE.txt)
-![Docker Pulls Vesica](https://img.shields.io/docker/pullsvesica/php73)
+![Docker Pulls Vesica](https://img.shields.io/docker/pulls/vesica/php73)
 ![Docker Pulls Islamic Network](https://img.shields.io/docker/pulls/islamicnetwork/php73)
 
 # PHP 7.3 Docker Image with Apache
