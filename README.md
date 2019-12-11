@@ -1,6 +1,7 @@
-[![CircleCI](https://circleci.com/gh/vesica/php73.svg?style=shield)](https://circleci.com/gh/vesica/php73)
-[![](https://img.shields.io/github/license/vesica/php73.svg)](https://github.com/vesica/php73/blob/master/LICENSE.txt)
-![Docker Pulls](https://img.shields.io/docker/pulls/vesica/php73)
+[![CircleCI](https://circleci.com/ghvesica/php73.svg?style=shield)](https://circleci.com/ghvesica/php73)
+[![](https://img.shields.io/github/license/islamic-network/php73.svg)](https://github.com/islamic-network/php73/blob/master/LICENSE.txt)
+![Docker Pulls Vesica](https://img.shields.io/docker/pullsvesica/php73)
+![Docker Pulls Islamic Network](https://img.shields.io/docker/pulls/islamicnetwork/php73)
 
 # PHP 7.3 Docker Image with Apache
 
@@ -14,15 +15,18 @@ The Apache document root in the container is /var/www/html and Apache is exposed
 
 ## Pull from Docker Hub to use
 
+Images are available on Docker Hub from both the islamicnetwork and vesica namespaces. You can, therefore 
+use `vesica/php73` or `islamicnetwork/php73`.
+
 For production use, without XDebug:
 
 ```
-docker run -d -p 8080:8080 -it --name=php -v $(pwd)/var/www/html:/var/www/html quay.io/vesica/php73:latest
+docker run -d -p 8080:8080 -it --name=php -v $(pwd)/var/www/html:/var/www/html islamicnetwork/php73:latest
 ```
 
 or with XDebug:
 ```
-docker run -d -p 8080:8080 -it --name=php -v $(pwd)/var/www/html:/var/www/html quay.io/vesica/php73:dev
+docker run -d -p 8080:8080 -it --name=php -v $(pwd)/var/www/html:/var/www/html islamicnetwork/php73:dev
 ```
 
 ## Build to use as a development environment (i.e., with XDebug):
@@ -36,13 +40,6 @@ docker run -d -p 8080:8080 -it --name=php -v $(pwd)/var/www/html:/var/www/html p
 docker build -f Dockerfile . -t php73
 docker run -d -p 8080:8080 -it --name=php -v $(pwd)/var/www/html:/var/www/html php73
 ```
-
-
-## Publish Images
-Run ```sh build.sh``` to update quay.io/vesica/php73:latest and vesica/php73:latest (https://hub.docker.com/r/vesica/php72/) as well as the version specified in that file.
-Running ```build.sh``` will also create quay.io/vesica/php73:dev and vesica/php73:dev on hub.docker.com which is basically the same image with XDebug.
-
-Please specify the appropriate version for the version number variable in build.sh.
 
 ## Using Docker Secrets
 This image now supports Docker Swarm Secrets via a modification of https://github.com/rbdiang/docker-secrets-example.
